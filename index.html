@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Meeting Counter</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <section class="section">
+  <h1 class="title">What a waste!</h1>
+  
+  <div v-if="wasting">
+    <button class="button button-good" @click="pause">Take a break :-)</button>
+    <p>You're currently wasting <i>time and money</i>. Here's how much ;-)</p>
+  </div>
+  <div v-else>
+    <button class="button button-bad" @click="start">Start wasting!</button>
+    <p>&nbsp;</p>
+  </div>
+  
+  <div class="top">
+    <div class="label">Collectively wasted time</div>
+    <div class="value">{{ time }}<span class="unit">{{ timeUnit }}</div>
+    <div class="label">Total money wasted</div>
+      <div class="value">{{ money }}<span class="unit">$</span></div>
+  </div>
+    
+  <p>Let's say you're in a meeting with <input class="input" v-model="nPeople" /> people with an average hourly rate of <input class="input" v-model="hourlyRate" />$/hour. 
+    </p>
+  <p>You're wasting money at the alarming rate of {{ ratePerHour }}$/hour. You're never gonna get that back! That's {{ ratePerMinute }}$/minute and {{ ratePerSecond }}$/second. Unimaginable, isn't it</p>
+    <p>Just imagine what you could be doing instead.</p>
+</section>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
