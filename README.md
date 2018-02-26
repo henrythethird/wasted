@@ -1,5 +1,7 @@
 # Wasted
 
+Visualizing lost time and money
+
 ## The Problem
 
 Do you ever feel like you're wasting time in meetings?
