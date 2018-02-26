@@ -28,11 +28,12 @@ new Vue({
   },
   computed: {
     timeUnit () {
-      if (this.totalTime > 60) {
+      const tt = this.totalTime * this.nPeople
+      if (tt > 60) {
         return 'm'
       }
       
-      if (this.totalTime > 3600) {
+      if (tt > 3600) {
         return 'h'
       }
       
